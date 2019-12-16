@@ -1,0 +1,3 @@
+#!/bin/bash
+
+xterm -ti vt340
