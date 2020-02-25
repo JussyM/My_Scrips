@@ -1,1 +1,1 @@
-here are the scripts i created nothing new 
+here are the scripts I created nothing new 
