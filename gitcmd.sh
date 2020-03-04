@@ -5,12 +5,12 @@ if [ $ans== "y" ]
 then
 git init
  git add .
-echo -n "git init && git add réussi"
+echo  "git init && git add réussi"
 git commit -a 
-echo -n "Commit successfull"
+echo "Commit successfull"
 else [ $ans== "n" ]
 git add . && git commit -a
-echo -n "git add et commit réussi"
+echo  "git add et commit réussi"
 fi
 echo -n "Un pull est-il nécessaire Y/N: "
 read ans2
