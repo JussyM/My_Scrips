@@ -21,6 +21,7 @@ then
 read path1
 git pull $path1 
 fi
-echo -n "Veuillez entrez le lien git vers votre dépôt pour le push distant:"
+if [ $ans2=="n" ]
+echo -n "Lien git vers votre dépôt pour le push:"
 read path 
 git push $path
