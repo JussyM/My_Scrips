@@ -23,5 +23,5 @@ else [ $ans2=="n" ]
 echo -n "Lien git vers votre dépôt pour le push:"
 read path 
 git push $path
-echo -n "Pull successfull\n"
+echo  "Pull successfull"
 fi
