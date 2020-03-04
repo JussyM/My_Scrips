@@ -12,15 +12,15 @@ else [ $ans == "n" ]
 git add . && git commit -a
 echo -e "\033[32mgit add et commit réussi\033[0m "
 fi
-echo -n "Un pull est-il nécessaire Y/N: "
+echo -e "\033[36mUn pull est-il nécessaire Y/N: \033[0m "
 read ans2
 if [ $ans2 == "y" ]
 then
-echo -n "Lien de votre dépôt git:"
+echo -e "\033[36mLien de votre dépôt git:\033[0m "
 read path1
 git pull $path1 
 else [ $ans2 == "n" ]
-echo -n "Lien git vers votre dépôt pour le push:"
+echo -e "\033[36mLien git vers votre dépôt pour le push:\033[0m "
 read path 
 git push $path
 echo -e "\033[32mPull successfull\033[0m "
