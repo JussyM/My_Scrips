@@ -1,16 +1,16 @@
 #!/bin/bash
-echo -n "Nouveau dépôt Y/N: "
+echo -e "\033[36mNouveau dépôt Y/N:\033[0m "
 read ans
 if [ $ans == "y" ]
 then
 git init
  git add .
-echo  "git init && git add réussi"
+echo -e "\033[32mgit init && git add réussi\033[0m "
 git commit -a 
-echo "Commit successfull"
+echo -e "\033[32mCommit successfull\033[0m "
 else [ $ans == "n" ]
 git add . && git commit -a
-echo  "git add et commit réussi"
+echo -e "\033[32mgit add et commit réussi\033[0m "
 fi
 echo -n "Un pull est-il nécessaire Y/N: "
 read ans2
@@ -23,5 +23,5 @@ else [ $ans2 == "n" ]
 echo -n "Lien git vers votre dépôt pour le push:"
 read path 
 git push $path
-echo  "Pull successfull"
+echo -e "\033[32mPull successfull\033[0m "
 fi
