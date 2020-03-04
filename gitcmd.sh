@@ -10,12 +10,14 @@ echo "Commit successfull"
 fi
 if [ $ans== "n" ]
 git add . && git commit -a
+then
 echo -n "git add et commit réussi"
 fi
 echo -n "Un pull est-il nécessaire Y/N: "
 read ans2
 if [ $ans2== "y" ]
 echo -n "Lien de votre dépôt git:"
+then
 read path1
 git pull $path1 
 fi
