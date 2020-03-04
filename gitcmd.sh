@@ -7,7 +7,7 @@ git init
  git add .
 echo -n "git init && git add réussi"
 git commit -a 
-echo "Commit successfull"
+echo -n "Commit successfull"
 else [ $ans== "n" ]
 git add . && git commit -a
 echo -n "git add et commit réussi"
@@ -24,3 +24,4 @@ echo -n "Lien git vers votre dépôt pour le push:"
 read path 
 git push $path
 echo -n "Pull successfull"
+fi
