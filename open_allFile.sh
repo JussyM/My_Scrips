@@ -1,3 +1,3 @@
 #!/bin/bash
 var= val
-xdg-open $var
+xdg-open $val
