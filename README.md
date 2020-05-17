@@ -3,8 +3,9 @@ Some of them are not complet and some of them are working
 
 back_up: Creat a back up for your laptop this is not mine source internet 
 *******
-changelockScreen:it help you open the lockScreen code and change the picture of your lockScreen to the one you prefer work with linux only
+changelockScreen:it help you open the lockScreen code and change the picture of your lockScreen to the one you prefer work with 
 ****************
+linux only
 colorCode: Print an arrays of color code for shell and scrips source internet
 *********
 gitcmd: apply the basics git commande on any file 
