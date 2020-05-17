@@ -2,12 +2,11 @@
 #dezipper un fichier dans un dossier et le supprimer après le fichier zip bien sur :)
 echo -n "nom du dossier: "
 read source
-echo -n "nom du fichier à deziper: "
-read zip
+read $*
 if mkdir $source
-mv $zip $source
+mv $* $source
 cd $source
 then
-unzip $zip
-rm -rf *$zip
+unzip $*
+rm -rf *$*
 fi

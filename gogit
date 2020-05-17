@@ -1,5 +1,5 @@
 #!/bin/bash
-echo -e "\033[36mNouveau dépôt Y/N:\033[0m " 
+echo -e "\033[36mNouveau dépôt Y/N:\033[0m "
 read ans
 if [ $ans == "y" ]
 then
