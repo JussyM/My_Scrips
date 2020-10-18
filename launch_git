@@ -20,8 +20,7 @@ echo -e "\033[36mLien de votre dépôt git:\033[0m "
 read path1
 git pull $path1 
 else [ $ans2 == "n" ]
-echo -e "\033[36mLien git vers votre dépôt pour le push:\033[0m "
-read path 
+echo -e "\033[36mRecherche de votre lien git ...\033[0m "
 git push $path
 echo -e "\033[32mPull successfull\033[0m "
 fi
