@@ -1,17 +1,86 @@
 #!/bin/bash
+function main
+{
+echo -e "Taper  u pour exécuter une seul commande de git ou a pour faire un depôt git complet"
+read ans
+if [ $ans == "u" ]
+then
+lancerCmdGit
+elif [ $ans == "a" ]
+then
+depotGit
+else
+echo -e "input non valable erreur fin programme"
+fi
+exit
+}
+
+function depotGit
+{
 echo -e "\033[36mNouveau dépôt Y/N:\033[0m "
 read ans
 if [ $ans == "y" ]
 then
-git init
- git add .
-echo -e "\033[32mgit init && git add réussi\033[0m "
-git commit -a 
-echo -e "\033[32mCommit successfull\033[0m "
+firstRepository
 else [ $ans == "n" ]
-git add . && git commit -a
-echo -e "\033[32mgit add et commit réussi\033[0m "
+depotGitClassic
 fi
+}
+
+function lancerCmdGit
+{
+echo -e "c pour un add et commit"
+echo -e "p1 pour un pull"
+echo -e "p2 pour un push"
+read ans
+case $ans in
+c)
+git add . && git commit
+;;
+p1)
+echo -e "lien git"
+read link
+git pull $link
+;;
+p2)
+echo -e "lien git"
+read link
+git push $link
+;;
+*)
+echo -e "input non valable erreur fin programme"
+;;
+esac
+exit
+}
+
+function firtRepository
+{
+echo -e "\033[32mnom user du dépôt distant"
+read userName
+git config --global user.name $name
+echo -e "\033[32memail dépôt"
+read email
+git config --global user.email $email
+echo -e "\033[32mconfig reussie...\033[0m"
+git init
+git add .
+echo -e "\033[32mgit init && git add réussi\033[0m "
+git commit -a
+echo -e "\033[32mCommit successfull\033[0m "
+echo -e "\033[32mlien du dépôt git [par defaut le le dépôt se fera sur la branche master]\033[0m"
+read link
+git remote add origin $link
+echo -e "\033[32mlancement du premier push vers le dépôt\033[0m"
+git push -u origin master
+exit
+}
+
+function depotGitClassic
+{
+echo -e "lance des commandes git..."
+git add . && git commit -a
+echo -e "\033[32mgit add et commit réussi\033[0m\033[0m "
 echo -e "\033[36mUn pull est-il nécessaire Y/N: \033[0m "
 read ans2
 if [ $ans2 == "y" ]
@@ -24,3 +93,7 @@ echo -e "\033[36mRecherche de votre lien git ...\033[0m "
 git push $path
 echo -e "\033[32mPull successfull\033[0m "
 fi
+}
+
+#appel de la fonction main 
+main
