@@ -40,9 +40,7 @@ c)
 git add . && git commit
 ;;
 p1)
-echo -e "lien git"
-read link
-git pull $link
+git pull
 ;;
 r)
 echo -e "lien git"
@@ -50,9 +48,7 @@ read link
 git remote add origin $link
 ;;
 p2)
-echo -e "lien git"
-read link
-git push $link
+git push 
 ;;
 *)
 echo -e "input non valable erreur fin programme"
@@ -97,6 +93,7 @@ read path1
 git pull $path1 
 else [ $ans2 == "n" ]
 echo -e "\033[36mRecherche de votre lien git ...\033[0m "
+sleep 2
 git push $path
 echo -e "\033[32mPull successfull\033[0m "
 fi
