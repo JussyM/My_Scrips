@@ -74,6 +74,7 @@ echo -e "\033[32mlien du dépôt git [par defaut le le dépôt se fera sur la br
 read link
 git remote add origin $link
 echo -e "\033[32mlancement du premier push vers le dépôt\033[0m"
+sleep 1
 git push -u origin master
 echo -e "fin"
 exit
